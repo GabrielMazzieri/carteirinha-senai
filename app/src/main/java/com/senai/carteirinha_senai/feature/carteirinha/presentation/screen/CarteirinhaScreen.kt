@@ -1,0 +1,41 @@
+package com.senai.carteirinha_senai.feature.carteirinha.presentation.screen
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import com.example.compose.CarteirinhaSenaiTheme
+@Composable
+fun CarteirinhaScreen(
+    modifier: Modifier = Modifier
+){
+
+    class CarteirinhaContent : ComponentActivity() {
+        override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+            enableEdgeToEdge()
+            setContent {
+                CarteirinhaSenaiTheme {
+                    Scaffold(modifier = Modifier.fillMaxSize()) {
+                            innerPadding ->
+                        CarteirinhaContent(modifier = Modifier
+                            .padding(innerPadding)
+                            .fillMaxSize())
+                    }
+
+
+                }
+            }
+        }
+    }
+
+    CarteirinhaContent(
+        qrCodeContent = "90000000001417175860",
+        modifier = modifier
+    )
+}
