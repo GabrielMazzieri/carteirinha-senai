@@ -22,8 +22,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.rafaelcosta.myapplication.QrCode
 import com.senai.carteirinha_senai.R
+import com.rafaelcosta.myapplication.QrCode
 import com.senai.carteirinha_senai.feature.carteirinha.presentation.component.ValueText
 
 @Composable
